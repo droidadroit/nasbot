@@ -12,7 +12,7 @@ from argparse import Namespace
 import time
 import numpy as np
 # Local imports
-from function_caller import EVAL_ERROR_CODE
+from opt.function_caller import EVAL_ERROR_CODE
 from nn.nn_examples import generate_many_neural_networks
 from utils.option_handler import get_option_specs, load_options
 from utils.reporters import get_reporter

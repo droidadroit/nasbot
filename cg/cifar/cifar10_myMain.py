@@ -15,9 +15,9 @@ import functools
 import itertools
 import os
 
-import cifar10
-import cifar10_model
-import cifar10_utils
+from cg.cifar import cifar10
+from cg.cifar import cifar10_model
+from cg.cifar import cifar10_utils
 import numpy as np
 import six
 from six.moves import xrange  # pylint: disable=redefined-builtin

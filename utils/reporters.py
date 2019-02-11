@@ -8,7 +8,7 @@ import sys
 
 def get_reporter(reporter):
   """ Returns a reporter based on what was passed as argument. If reporter is already
-      a reporter then it is returned. Otherwise, an appropriate reporter is constructed
+      a reporter then it is returned. Otherwise,dan appropriate reporter is constructed
       and returned. """
   if isinstance(reporter, str):
     if reporter.lower() == 'default':
@@ -17,7 +17,7 @@ def get_reporter(reporter):
       reporter = SilentReporter()
     else:
       raise ValueError('If reporter is string, it should be "default" or "silent".')
-  elif isinstance(reporter, file):
+  elif hasattr(reporter, 'read'):
     return BasicReporter(reporter)
   elif reporter is None:
     reporter = SilentReporter()

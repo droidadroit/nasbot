@@ -14,7 +14,7 @@ from argparse import Namespace
 from copy import deepcopy
 import numpy as np
 # Local imports
-from neural_network import ConvNeuralNetwork, MultiLayerPerceptron, MLP_RECTIFIERS, \
+from nn.neural_network import ConvNeuralNetwork, MultiLayerPerceptron, MLP_RECTIFIERS, \
                            MLP_SIGMOIDS, is_a_pooling_layer_label, is_a_conv_layer_label,\
                            CNNImageSizeMismatchException, CNNNoConvAfterIPException
 from utils.general_utils import reorder_list_or_array, reorder_rows_and_cols_in_matrix

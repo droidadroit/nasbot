@@ -473,7 +473,7 @@ class ConvNeuralNetwork(NeuralNetwork):
       if is_a_pooling_layer_label(self.layer_labels[layer_idx]) or \
          is_a_conv_layer_label(self.layer_labels[layer_idx]):
         # Checking only the first parent because we are checking for equality later.
-        assert isinstance(parent_post_img_sizes[0], (int, long, float)) and \
+        assert isinstance(parent_post_img_sizes[0], (int, int, float)) and \
                parent_post_img_sizes[0] > 0
       # Check parent image sizes and if they are consistent
       check_parent_img_sizes = self._check_if_parent_image_sizes_are_valid(

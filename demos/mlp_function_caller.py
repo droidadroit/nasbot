@@ -6,7 +6,7 @@
 
 # pylint: disable=arguments-differ
 
-import cPickle as pic
+import pickle
 import os
 from time import sleep
 from copy import deepcopy
@@ -35,8 +35,8 @@ class MLPFunctionCaller(NNFunctionCaller):
   def __init__(self, *args, **kwargs):
     super(MLPFunctionCaller, self).__init__(*args, **kwargs)
     # Load data
-    with open(self.train_params.data_train_file, 'rb') as input_file:
-      data = pic.load(input_file)
+    # with open(self.train_params.data_train_file, 'rb') as input_file:
+    data = pickle.load(open(self.train_params.data_train_file, 'rb'), encoding='latin1')
     self.data_train = data['train']
     self.data_vali = data['vali']
     self.reporter.writeln('Loaded data: ' + self.train_params.data_train_file)

@@ -12,7 +12,7 @@ from opt.domains import NNDomain
 from opt.function_caller import FunctionCaller
 from nn.nn_constraint_checkers import CNNConstraintChecker, MLPConstraintChecker
 from nn.nn_modifiers import get_nn_modifier_from_args
-from nn_opt_utils import get_initial_cnn_pool, get_initial_mlp_pool
+from opt.nn_opt_utils import get_initial_cnn_pool, get_initial_mlp_pool
 from utils.reporters import get_reporter
 from utils.option_handler import load_options
 from opt.worker_manager import SyntheticWorkerManager

@@ -24,7 +24,7 @@ from __future__ import print_function
 
 import tensorflow as tf
 
-from cifar10_model_base import ConvNet
+from cg.cifar.cifar10_model_base import ConvNet
 
 
 def get_layer_parents(adjList,lidx):
@@ -119,7 +119,7 @@ class ConvNetCifar10(ConvNet):
     layers = [x]  # Add first layer to layers-list 
     for lidx in range(1,nn.num_internal_layers+1):
       # Find and concatenate parent layers
-      plist = get_layer_parents(nn.conn_mat.viewkeys(),lidx)
+      plist = get_layer_parents(nn.conn_mat.keys(),lidx)
       parent_layers = [layers[i] for i in plist]
       if self._data_format == 'channels_last':
         input_layer = tf.concat(parent_layers,3)
@@ -132,6 +132,6 @@ class ConvNetCifar10(ConvNet):
       layers.append(nextLayer(input_layer))
 
     # Define output layer
-    plist = get_layer_parents(nn.conn_mat.viewkeys(),lidx+1) # indices for parents of output layer
+    plist = get_layer_parents(nn.conn_mat.keys(),lidx+1) # indices for parents of output layer
     parent_layers = [layers[i] for i in plist] # parent layers of output layer
     return parent_layers
