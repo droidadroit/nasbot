@@ -13,10 +13,10 @@ import functools
 import os
 import argparse
 import tensorflow as tf
-import cifar.cifar10_myMain as cifar10_myMain
-import cifar.cifar10 as cifar10
+from ..cifar import cifar10_myMain
+from ..cifar import cifar10
 import numpy as np
-from opt.nn_opt_utils import get_initial_pool
+from ...opt.nn_opt_utils import get_initial_pool
 
 
 os.environ['TF_CPP_MIN_LOG_LEVEL']='2' # To remove the tensorflow compilation warnings

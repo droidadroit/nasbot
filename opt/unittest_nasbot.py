@@ -8,14 +8,14 @@
 # pylint: disable=abstract-class-little-used
 
 # Local
-from nn.syn_nn_functions import cnn_syn_func1, mlp_syn_func1
-from opt.function_caller import FunctionCaller
-from opt import nasbot
-from nn.nn_comparators import get_default_otmann_distance
-from opt.unittest_ga_optimiser import test_if_pre_eval_networks_have_changed, \
+from ..nn.syn_nn_functions import cnn_syn_func1, mlp_syn_func1
+from ..opt.function_caller import FunctionCaller
+from ..opt import nasbot
+from ..nn.nn_comparators import get_default_otmann_distance
+from ..opt.unittest_ga_optimiser import test_if_pre_eval_networks_have_changed, \
                                   get_optimiser_args, get_nn_opt_arguments
-from utils.base_test_class import BaseTestClass, execute_tests
-from opt.worker_manager import SyntheticWorkerManager
+from ..utils.base_test_class import BaseTestClass, execute_tests
+from ..opt.worker_manager import SyntheticWorkerManager
 
 
 def get_tp_comp(nn_type):

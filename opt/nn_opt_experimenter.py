@@ -14,11 +14,12 @@ from datetime import datetime
 import numpy as np
 import os
 # Local imports
-from opt.blackbox_optimiser import Initialiser
-from opt.ga_optimiser import ga_optimise_from_args
-from opt.nn_gp_bandit import nngpb_from_func_caller, nnrandbandit_from_func_caller
-from opt.nn_opt_utils import get_initial_pool
-from utils.experimenters import BasicExperimenter
+from ..opt.blackbox_optimiser import Initialiser
+from ..opt.ga_optimiser import ga_optimise_from_args
+from ..opt.gp_bandit import gpb_from_func_caller
+from ..opt.nasbot import nnrandbandit_from_func_caller
+from ..opt.nn_opt_utils import get_initial_pool
+from ..utils.experimenters import BasicExperimenter
 
 class NNOptExperimenter(BasicExperimenter):
   """ Base class for running experiments. """

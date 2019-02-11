@@ -15,15 +15,15 @@ import functools
 import itertools
 import os
 
-from cg.cifar import cifar10
-from cg.cifar import cifar10_model
-from cg.cifar import cifar10_utils
+from ..cifar import cifar10
+from ..cifar import cifar10_model
+from ..cifar import cifar10_utils
 import numpy as np
 import six
 from six.moves import xrange  # pylint: disable=redefined-builtin
 import tensorflow as tf
 
-from opt.nn_opt_utils import get_initial_pool
+from ...opt.nn_opt_utils import get_initial_pool
 
 tf.logging.set_verbosity(tf.logging.INFO)
 

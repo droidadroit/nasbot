@@ -10,9 +10,9 @@
 # pylint: disable=no-name-in-module
 
 import numpy as np
-import graph_utils
+from ..utils import graph_utils
 from time import clock
-from utils.base_test_class import BaseTestClass, execute_tests
+from ..utils.base_test_class import BaseTestClass, execute_tests
 from scipy.sparse import dok_matrix
 
 

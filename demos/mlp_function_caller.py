@@ -11,8 +11,8 @@ import os
 from time import sleep
 from copy import deepcopy
 # Local
-from opt.nn_function_caller import NNFunctionCaller
-import cg.run_tensorflow
+from ..opt.nn_function_caller import NNFunctionCaller
+from ..cg import run_tensorflow
 
 _MAX_TRIES = 3
 _SLEEP_BETWEEN_TRIES_SECS = 3
@@ -62,7 +62,7 @@ class MLPFunctionCaller(NNFunctionCaller):
     succ_eval = False
     while num_tries < _MAX_TRIES and not succ_eval:
       try:
-        vali_score = cg.run_tensorflow.compute_validation_error(nn, self.data_train,
+        vali_score = run_tensorflow.compute_validation_error(nn, self.data_train,
                        self.data_vali, 0, self.train_params.tf_params, self.tmp_dir)
         succ_eval = True
       except:

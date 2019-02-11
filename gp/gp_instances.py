@@ -8,9 +8,9 @@
 
 import numpy as np
 # Local imports
-from gp import gp_core
-from gp import kernel
-from utils.option_handler import get_option_specs
+from ..gp import gp_core
+from ..gp import kernel
+from ..utils.option_handler import get_option_specs
 
 _DFLT_KERNEL_TYPE = 'se'
 

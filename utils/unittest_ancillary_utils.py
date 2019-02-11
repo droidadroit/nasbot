@@ -7,8 +7,8 @@
 # pylint: disable=no-member
 # pylint: disable=invalid-name
 
-from utils import ancillary_utils
-from utils.base_test_class import BaseTestClass, execute_tests
+from ..utils import ancillary_utils
+from ..utils.base_test_class import BaseTestClass, execute_tests
 
 
 class AncillaryUtilsTestCase(BaseTestClass):

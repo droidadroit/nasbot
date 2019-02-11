@@ -9,12 +9,12 @@ import numpy as np
 import os
 import time
 # Local
-from nn.nn_constraint_checkers import get_nn_domain_from_constraints
-from nn.nn_visualise import visualise_nn
-from opt import nasbot
-from demos.cnn_function_caller import CNNFunctionCaller
-from opt.worker_manager import RealWorkerManager
-from utils.reporters import get_reporter
+from ..nn.nn_constraint_checkers import get_nn_domain_from_constraints
+from ..nn.nn_visualise import visualise_nn
+from ..opt import nasbot
+from ..demos.cnn_function_caller import CNNFunctionCaller
+from ..opt.worker_manager import RealWorkerManager
+from ..utils.reporters import get_reporter
 
 # Data:
 # We use the Cifar10 dataset which is converted to .tfrecords format for tensorflow.

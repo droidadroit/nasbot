@@ -9,14 +9,14 @@
 
 import numpy as np
 # Local
-from utils.syn_functions import get_syn_function_caller_from_name
-from worker_manager import SyntheticWorkerManager
-import gp_bandit
-from gp.gp_instances import all_simple_gp_args
+from ..utils.syn_functions import get_syn_function_caller_from_name
+from .worker_manager import SyntheticWorkerManager
+from ..opt import gp_bandit
+from ..gp.gp_instances import all_simple_gp_args
 # from nn.nn_gp import nn_gp_args
-from utils.base_test_class import BaseTestClass, execute_tests
-import utils.reporters as reporters
-from utils.option_handler import load_options
+from ..utils.base_test_class import BaseTestClass, execute_tests
+from ..utils import reporters
+from ..utils.option_handler import load_options
 
 
 class GPBanditTestCase(BaseTestClass):

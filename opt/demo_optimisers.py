@@ -6,16 +6,16 @@
 #pylint: disable=relative-import
 
 # Local imports
-from opt import ga_optimiser
-from nn.syn_nn_functions import cnn_syn_func1, mlp_syn_func1
-from opt.domains import NNDomain
-from opt.function_caller import FunctionCaller
-from nn.nn_constraint_checkers import CNNConstraintChecker, MLPConstraintChecker
-from nn.nn_modifiers import get_nn_modifier_from_args
-from opt.nn_opt_utils import get_initial_cnn_pool, get_initial_mlp_pool
-from utils.reporters import get_reporter
-from utils.option_handler import load_options
-from opt.worker_manager import SyntheticWorkerManager
+from ..opt import ga_optimiser
+from ..nn.syn_nn_functions import cnn_syn_func1, mlp_syn_func1
+from ..opt.domains import NNDomain
+from ..opt.function_caller import FunctionCaller
+from ..nn.nn_constraint_checkers import CNNConstraintChecker, MLPConstraintChecker
+from ..nn.nn_modifiers import get_nn_modifier_from_args
+from ..opt.nn_opt_utils import get_initial_cnn_pool, get_initial_mlp_pool
+from ..utils.reporters import get_reporter
+from ..utils.option_handler import load_options
+from ..opt.worker_manager import SyntheticWorkerManager
 
 
 # The problem
@@ -64,10 +64,10 @@ def main():
   # Get problem parameters
   worker_manager = SyntheticWorkerManager(NUM_WORKERS, time_distro='halfnormal')
   _, func_caller, mutation_op, init_points, init_vals = get_opt_problem(NN_TYPE)
-  print 'Best init value: %0.5f'%(max(init_vals))
+  print('Best init value: %0.5f' % max(init_vals))
 
   for method in METHODS:
-    print 'Method: %s =========================================================='%(method)
+    print('Method: %s ==========================================================' % method)
     worker_manager.reset()
     # Iterate through each method
     if method in ['GA', 'randGA']:
@@ -76,7 +76,7 @@ def main():
       ga_optimiser.ga_optimise_from_args(func_caller, worker_manager,
         CAPITAL, 'asy', mutation_op, is_rand=is_rand, options=options, reporter=reporter)
     # Wrap up method
-    print ''
+    print('')
 
 
 if __name__ == '__main__':

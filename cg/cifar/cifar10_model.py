@@ -24,7 +24,7 @@ from __future__ import print_function
 
 import tensorflow as tf
 
-from cg.cifar.cifar10_model_base import ConvNet
+from .cifar10_model_base import ConvNet
 
 
 def get_layer_parents(adjList,lidx):

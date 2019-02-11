@@ -8,11 +8,11 @@
 # pylint: disable=invalid-name
 # pylint: disable=relative-import
 
-from utils.base_test_class import BaseTestClass, execute_tests
+from ..utils.base_test_class import BaseTestClass, execute_tests
 import numpy as np
 # Local
-from gp import gp_core
-from gp import kernel
+from ..gp import gp_core
+from ..gp import kernel
 
 
 def gen_gp_test_data():

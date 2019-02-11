@@ -7,12 +7,12 @@
 import os
 import numpy as np
 # Local
-from nn import syn_nn_functions
-from opt.domains import NNDomain
-from opt import nn_opt_utils
-from utils.base_test_class import BaseTestClass, execute_tests
-from nn.nn_examples import generate_many_neural_networks
-from nn.nn_visualise import visualise_list_of_nns
+from ..nn import syn_nn_functions
+from ..opt.domains import NNDomain
+from ..opt import nn_opt_utils
+from ..utils.base_test_class import BaseTestClass, execute_tests
+from ..nn.nn_examples import generate_many_neural_networks
+from ..nn.nn_visualise import visualise_list_of_nns
 
 _TOL = 1e-5
 
